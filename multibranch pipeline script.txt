@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('master') {
+            steps {
+                sh ' echo "this is master branch.."
+
+            }
+        }
+        
+         stage('sprint1') { 
+             steps {
+                 sh ' echo "this is sprint1 branch"
+
+            }
+        }
+         
+         stage('hotfix') {
+             steps {
+                 sh ' echo "this is hotfix branch"
+            }
+        }
+    }
+}
